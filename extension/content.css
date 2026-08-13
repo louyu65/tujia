@@ -1,0 +1,190 @@
+/* HiddenBox Extension Content Script Styles */
+.hb-decrypted-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(13, 148, 136, 0.15) !important;
+  color: #14b8a6 !important;
+  border: 1px solid rgba(20, 184, 166, 0.4) !important;
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 0.85em !important;
+  line-height: 1.3 !important;
+  margin: 0 4px !important;
+  vertical-align: baseline !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.hb-badge-tag {
+  font-weight: 700 !important;
+  background: #0f766e !important;
+  color: #ffffff !important;
+  padding: 1px 4px !important;
+  border-radius: 4px !important;
+  font-size: 0.8em !important;
+}
+
+.hb-password-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(225, 29, 72, 0.15) !important;
+  color: #fb7185 !important;
+  border: 1px dashed rgba(244, 63, 94, 0.6) !important;
+  border-radius: 6px !important;
+  padding: 2px 8px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 0.85em !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+}
+
+.hb-password-badge:hover {
+  background-color: rgba(225, 29, 72, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Stego Image / Binder In-Page Decrypted Card */
+.hb-binder-container {
+  margin-top: 8px !important;
+  padding: 12px !important;
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+  border-radius: 12px !important;
+  color: #f8fafc !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.hb-binder-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-bottom: 1px solid #1e293b !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 10px !important;
+}
+
+.hb-binder-title {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #c084fc !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.hb-binder-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)) !important;
+  gap: 8px !important;
+  margin-top: 8px !important;
+}
+
+.hb-binder-item {
+  background: #1e293b !important;
+  border-radius: 8px !important;
+  padding: 6px !important;
+  border: 1px solid #334155 !important;
+  text-align: center !important;
+}
+
+.hb-binder-img {
+  width: 100% !important;
+  height: 80px !important;
+  object-fit: cover !important;
+  border-radius: 6px !important;
+}
+
+.hb-binder-name {
+  font-size: 10px !important;
+  color: #cbd5e1 !important;
+  font-family: monospace !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-top: 4px !important;
+}
+
+.hb-btn-dl {
+  display: inline-block !important;
+  margin-top: 4px !important;
+  padding: 3px 8px !important;
+  background: #2563eb !important;
+  color: white !important;
+  font-size: 10px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+
+/* In-Page Password Prompt Dialog Overlay */
+.hb-modal-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(4px) !important;
+  z-index: 9999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hb-modal-card {
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  width: 320px !important;
+  color: #f8fafc !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.hb-modal-title {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin-bottom: 6px !important;
+  color: #38bdf8 !important;
+}
+
+.hb-modal-input {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: #1e293b !important;
+  border: 1px solid #475569 !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  margin: 12px 0 !important;
+  outline: none !important;
+}
+
+.hb-modal-btns {
+  display: flex !important;
+  gap: 8px !important;
+  justify-content: flex-end !important;
+}
+
+.hb-modal-btn {
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  border: none !important;
+}
+
+.hb-modal-btn-cancel {
+  background: #334155 !important;
+  color: #94a3b8 !important;
+}
+
+.hb-modal-btn-submit {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}

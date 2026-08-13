@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>HiddenBox Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div className="popup-container" id="app">
+    <!-- Header -->
+    <div className="header">
+      <div className="logo-box">
+        <div className="logo-icon">🔓</div>
+        <div>
+          <div className="title flex-row">
+            <span>HiddenBox</span>
+            <span className="badge">v1.0</span>
+          </div>
+          <div className="subtitle">隐写与图夹原位解密助手</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Switch -->
+    <div className="card switch-card">
+      <div className="switch-info">
+        <div className="switch-title">⚡ 一键自动扫描解密</div>
+        <div className="switch-desc">页面加载完成后自动检测原位替换</div>
+      </div>
+      <label className="toggle">
+        <input type="checkbox" id="autoDecryptToggle" checked>
+        <span className="slider"></span>
+      </label>
+    </div>
+
+    <!-- Scan Modes -->
+    <div className="card settings-card">
+      <div className="card-title">检测检测模式</div>
+      
+      <div className="setting-row">
+        <span>🔤 零宽字符 / 变体隐写文本</span>
+        <label className="toggle sm">
+          <input type="checkbox" id="detectTextToggle" checked>
+          <span className="slider"></span>
+        </label>
+      </div>
+
+      <div className="setting-row">
+        <span>🖼️ Polyglot 隐写图夹与容器</span>
+        <label className="toggle sm">
+          <input type="checkbox" id="detectImageToggle" checked>
+          <span className="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Default Password Input -->
+    <div className="card password-card">
+      <div className="card-title">🔑 默认解密全局口令 (可选)</div>
+      <input type="password" id="globalPassword" placeholder="若涉及 AES 加密自动套用此密码..." />
+    </div>
+
+    <!-- Actions -->
+    <div className="action-box">
+      <button id="scanBtn" className="btn btn-primary">
+        🔍 扫描并解密当前页面
+      </button>
+    </div>
+
+    <!-- Status Stats -->
+    <div className="stats-box" id="statsBox">
+      <div className="stat-item">
+        <div className="stat-num" id="textCount">0</div>
+        <div className="stat-lbl">解密文本</div>
+      </div>
+      <div className="stat-item">
+        <div className="stat-num" id="binderCount">0</div>
+        <div className="stat-lbl">还原图夹</div>
+      </div>
+    </div>
+
+    <div className="footer">
+      HiddenBox 纯前端安全算法驱动 • 100% 隐私保护
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
