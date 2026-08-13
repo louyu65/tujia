@@ -90,6 +90,11 @@ export default {
         });
       }
 
+      // For non-API routes, serve static frontend assets from dist directory via env.ASSETS
+      if (env.ASSETS && typeof env.ASSETS.fetch === 'function') {
+        return await env.ASSETS.fetch(request);
+      }
+
       return new Response(JSON.stringify({ name: 'HiddenBox Cloudflare Worker Edge API', version: '2.0.0' }), {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       });
